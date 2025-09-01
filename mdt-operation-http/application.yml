@@ -1,0 +1,32 @@
+spring:
+   application:
+      name: MDTOperationServer
+   servlet:
+      multipart:
+         maxFileSize: 200MB
+         maxRequestSize: 200MB
+      
+server:
+   port: 12987
+   error:
+      include-message: always
+
+root-dir: ${MDT_HOME}/mdt-operation-http
+
+logging:
+  config: file:${root-dir}/logback.xml
+ 
+operation-server:
+   homeDir: ${root-dir}
+   operations: operations.json
+
+mdt-manager:
+   endpoint: http://${LOCAL_HOST:localhost}:12985
+
+skku:
+   simulatorEndpoint: http://localhost:12987/skku
+   simulationSubmodelRefString: 내함_성형/Simulation
+   workingDirectory: skku
+   command: [ "code" ]
+   timeout: PT5M
+   sessionRetainTimeout: PT30S

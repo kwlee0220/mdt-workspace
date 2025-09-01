@@ -1,5 +1,6 @@
 /bundles/
 /instances/
+/logs/
 
 *.log
 mdt-*.jar
