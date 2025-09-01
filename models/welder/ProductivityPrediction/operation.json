@@ -1,0 +1,8 @@
+{
+	"commandLine": [
+		"python3",
+		"estimate_throughput.py",
+		"--nozzleProduction", "${NozzleProduction:value}",
+		"--outputFile", "${TotalThroughput:path}"
+	]
+}
