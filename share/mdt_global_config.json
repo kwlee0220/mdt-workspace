@@ -1,0 +1,32 @@
+{
+  "jdbcs": {
+    "default": {
+      "driverClassName" : "org.postgresql.Driver",
+      "jdbcUrl" : "jdbc:postgresql://localhost:5432/mdt_app",
+      "user" : "mdt",
+      "password" : "mdt2025"
+    },
+    "lg-fridge": {
+      "jdbcUrl": "jdbc:mariadb://129.254.89.150:23306/emdb",
+      "user": "admin123",
+      "password": "admin123"
+    }
+  },
+  "mqttBrokers": {
+    "default": {
+      "brokerUrl": "tcp://localhost:1883",
+      "reconnectTryInterval": "10s",
+      "publishTimeout": "1s"
+    }
+  },
+  "rosBridges": {
+    "default": {
+      "serverUri": "ws://localhost:9090"
+    }
+  },
+  "opcuas": {
+    "default": {
+      "serverEndpoint": "opc.tcp://localhost:4840/freeopcua/server"
+    }
+  }
+}
