@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# java -Dfile.encoding=UTF-8 -jar $MDT_HOME/mdt-manager/mdt-instance-all.jar --id $1 --instanceEndpoint https://$LOCAL_HOST:$2 --type external ${@:3}
+java -Dfile.encoding=UTF-8 -jar $MDT_HOME/mdt-manager/mdt-instance-all.jar --type external ${@:1}

@@ -1,0 +1,11 @@
+{
+	"commandLine": [
+		"python3",
+		"op_increment.py",
+		"${Data:value}",
+		"--inc", "${IncAmount:value}",
+		"--sleep", "${SleepTime:value}",
+		"--output", "${Output:path}"
+	],
+	"timeout": "1m"
+}

@@ -1,0 +1,815 @@
+{
+  "assetAdministrationShells": [
+    {
+      "category": "CONSTANT",
+      "idShort": "Test",
+      "id": "http://mdt.etri.re.kr/mdt/Test",
+      "assetInformation": {
+        "globalAssetId": "KRCW-01EATT019",
+        "assetType": "Machine",
+        "assetKind": "Instance"
+      },
+      "submodels": [
+        {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "http://mdt.etri.re.kr/mdt/Test/sm/InformationModel"
+            }
+          ]
+        },
+        {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "http://mdt.etri.re.kr/mdt/Test/sm/Data"
+            }
+          ]
+        },
+        {
+          "type": "ExternalReference",
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "http://mdt.etri.re.kr/mdt/Test/sm/AddAndSleep"
+            }
+          ]
+        }
+      ],
+      "modelType": "AssetAdministrationShell"
+    }
+  ],
+  "submodels": [
+    {
+      "idShort": "InformationModel",
+      "administration": {},
+      "id": "http://mdt.etri.re.kr/mdt/Test/sm/InformationModel",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://etri.re.kr/mdt/Submodel/InformationModel/1/1"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "idShort": "MDTInfo",
+          "value": [
+            {
+              "idShort": "AssetName",
+              "valueType": "xs:string",
+              "value": "\uC9C4\uB3D9 \uC735\uCC29 \uC7A5\uBE44",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "AssetType",
+              "valueType": "xs:string",
+              "value": "Machine",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "Status",
+              "valueType": "xs:string",
+              "value": "",
+              "modelType": "Property"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "TwinComposition",
+          "modelType": "SubmodelElementCollection"
+        }
+      ],
+      "modelType": "Submodel"
+    },
+    {
+      "category": "",
+      "idShort": "Data",
+      "id": "http://mdt.etri.re.kr/mdt/Test/sm/Data",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://etri.re.kr/mdt/Submodel/Data/1/1"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "idShort": "SubModelInfo",
+          "value": [
+            {
+              "idShort": "Title",
+              "valueType": "xs:string",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "Creator",
+              "valueType": "xs:string",
+              "modelType": "Property"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "category": "",
+          "idShort": "DataInfo",
+          "value": [
+            {
+              "idShort": "Equipment",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://etri.re.kr/mdt/Submodel/Data/Equipment/1/1"
+                  }
+                ]
+              },
+              "value": [
+                {
+                  "idShort": "EquipmentID",
+                  "valueType": "xs:string",
+                  "value": "Test",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "EquipmentName",
+                  "valueType": "xs:string",
+                  "value": "\uC9C4\uB3D9 \uC735\uCC29",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "EquipmentParameters",
+                  "typeValueListElement": "SubmodelElement",
+                  "value": [
+                    {
+                      "idShort": "",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/Parameter/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "Data",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterName",
+                          "valueType": "xs:string",
+                          "value": "\uD14C\uC2A4\uD2B8\uC6A9 \uB370\uC774\uD130",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterType",
+                          "valueType": "xs:string",
+                          "value": "FLOAT",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EquipmentID",
+                          "valueType": "xs:string",
+                          "value": "Test",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "idShort": "",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/Parameter/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "IncAmount",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterName",
+                          "valueType": "xs:string",
+                          "value": "\uC99D\uAC00\uB7C9",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterType",
+                          "valueType": "xs:string",
+                          "value": "INT",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EquipmentID",
+                          "valueType": "xs:string",
+                          "value": "Test",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "idShort": "",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/Parameter/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "SleepTime",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterName",
+                          "valueType": "xs:string",
+                          "value": "\uD0DC\uC2A4\uD06C \uB300\uAE30 \uC2DC\uAC04",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterType",
+                          "valueType": "xs:string",
+                          "value": "INT",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EquipmentID",
+                          "valueType": "xs:string",
+                          "value": "Test",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    }
+                  ],
+                  "modelType": "SubmodelElementList"
+                },
+                {
+                  "idShort": "EquipmentParameterValues",
+                  "typeValueListElement": "SubmodelElement",
+                  "value": [
+                    {
+                      "idShort": "Data",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/ParameterValue/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "Data",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EventDateTime",
+                          "valueType": "xs:dateTime",
+                          "value": "2024-05-24T23:57:31",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterValue",
+                          "valueType": "xs:int",
+                          "value": "0",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "idShort": "IncAmount",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/ParameterValue/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "IncAmount",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EventDateTime",
+                          "valueType": "xs:dateTime",
+                          "value": null,
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterValue",
+                          "valueType": "xs:int",
+                          "value": "1",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "idShort": "SleepTime",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/ParameterValue/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "SleepTime",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EventDateTime",
+                          "valueType": "xs:dateTime",
+                          "value": "2024-05-24T23:57:36",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterValue",
+                          "valueType": "xs:float",
+                          "value": "3",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    }
+                  ],
+                  "modelType": "SubmodelElementList"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        }
+      ],
+      "modelType": "Submodel"
+    },
+    {
+      "idShort": "AddAndSleep",
+      "description": [
+        {
+          "language": "Korean",
+          "text": "Simulationsubmodeltemplate"
+        }
+      ],
+      "id": "http://mdt.etri.re.kr/mdt/Test/sm/AddAndSleep",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://etri.re.kr/mdt/Submodel/Simulation/1/1"
+          }
+        ]
+      },
+      "qualifiers": [
+        {
+          "type": "http://mdt.etri.re.kr/quantifier/OperationMethod",
+          "valueType": "xs:string",
+          "value": "http",
+          "kind": "ValueQualifier"
+        },
+        {
+          "type": "http://mdt.etri.re.kr/quantifier/OperationServerEndpoint",
+          "valueType": "xs:string",
+          "value": "http://localhost:8080/operation",
+          "kind": "ValueQualifier"
+        },
+        {
+          "type": "http://mdt.etri.re.kr/quantifier/OperationId",
+          "valueType": "xs:string",
+          "value": "test/AddAndSleep",
+          "kind": "ValueQualifier"
+        }
+      ],
+      "submodelElements": [
+        {
+          "idShort": "SubModelInfo",
+          "value": [
+            {
+              "idShort": "Title",
+              "valueType": "xs:string",
+              "value": "\uD14C\uC2A4\uD2B8\uC6A9 \uC7A5\uCE58",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "Creator",
+              "valueType": "xs:string",
+              "value": "ETRI",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "Identifier",
+              "valueType": "xs:string",
+              "value": "\uD14C\uC2A4\uD2B8\uC6A9 \uC7A5\uCE58",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "ReferenceAddress",
+              "value": [
+                {
+                  "idShort": "DockerImageID",
+                  "valueType": "xs:string",
+                  "value": "NA",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "Address",
+                  "valueType": "xs:string",
+                  "value": "NA",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "SimulationInfo",
+          "value": [
+            {
+              "idShort": "Model",
+              "value": [
+                {
+                  "idShort": "ModelFileType",
+                  "valueType": "xs:string",
+                  "value": "",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "ModelFileVersion",
+                  "value": [
+                    {
+                      "idShort": "ModelVersionId",
+                      "valueType": "xs:string",
+                      "value": "MDT/ProcessLine/SubModel/Simulation/SimulationInfo/ModelVersionId/0.3",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "ModelPreviewImage",
+                      "valueType": "xs:string",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "DigitalFile",
+                      "valueType": "xs:string",
+                      "value": "LGE_CW_Innercase00_PlnatSimulationModel_v0.3.spp",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "LastExecutionTime",
+                  "valueType": "xs:duration",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "MinResourceRequirements",
+              "value": [
+                {
+                  "idShort": "CPUNum",
+                  "valueType": "xs:string",
+                  "value": "",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "MemorySize",
+                  "valueType": "xs:string",
+                  "value": "",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "MemorySpeed",
+                  "valueType": "xs:string",
+                  "value": "",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "SimulationTool",
+              "value": [
+                {
+                  "idShort": "SimToolName",
+                  "valueType": "xs:string",
+                  "value": "TecnomatixPlantSimulation16.1",
+                  "modelType": "Property"
+                },
+                {
+                  "category": "PARAMETER",
+                  "idShort": "SimulationTimeout",
+                  "valueType": "xs:duration",
+                  "value": "PT5M",
+                  "modelType": "Property"
+                },
+                {
+                  "category": "PARAMETER",
+                  "idShort": "SessionRetainTimeout",
+                  "valueType": "xs:duration",
+                  "value": "PT30S",
+                  "modelType": "Property"
+                },
+                {
+                  "category": "PARAMETER",
+                  "idShort": "SimulatorEndpoint",
+                  "valueType": "xs:string",
+                  "value": "http://localhost:12987",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "Inputs",
+              "orderRelevant": true,
+              "typeValueListElement": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "",
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://etri.re.kr/mdt/Submodel/Operation/Input/1/1"
+                      }
+                    ]
+                  },
+                  "value": [
+                    {
+                      "idShort": "InputID",
+                      "valueType": "xs:string",
+                      "value": "Data",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputName",
+                      "valueType": "xs:string",
+                      "value": "\uD14C\uC2A4\uD2B8\uC6A9 \uC785\uB825 \uC815\uBCF4",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputType",
+                      "valueType": "xs:string",
+                      "value": "INT",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputValue",
+                      "valueType": "xs:int",
+                      "value": "0",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputOption",
+                      "valueType": "xs:string",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputDescription",
+                      "valueType": "xs:string",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "",
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://etri.re.kr/mdt/Submodel/Operation/Input/1/1"
+                      }
+                    ]
+                  },
+                  "value": [
+                    {
+                      "idShort": "InputID",
+                      "valueType": "xs:string",
+                      "value": "IncAmount",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputName",
+                      "valueType": "xs:string",
+                      "value": "\uC99D\uAC00\uB7C9",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputValue",
+                      "valueType": "xs:int",
+                      "value": "1",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputType",
+                      "valueType": "xs:string",
+                      "value": "INT",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputOption",
+                      "valueType": "xs:string",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputDescription",
+                      "valueType": "xs:string",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "",
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://etri.re.kr/mdt/Submodel/Operation/Input/1/1"
+                      }
+                    ]
+                  },
+                  "value": [
+                    {
+                      "idShort": "InputID",
+                      "valueType": "xs:string",
+                      "value": "SleepTime",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputName",
+                      "valueType": "xs:string",
+                      "value": "\uB300\uAE30 \uC2DC\uAC04 (\uCD08)",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputValue",
+                      "valueType": "xs:float",
+                      "value": "2.5",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputType",
+                      "valueType": "xs:string",
+                      "value": "FLOAT",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputOption",
+                      "valueType": "xs:string",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputDescription",
+                      "valueType": "xs:string",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                }
+              ],
+              "modelType": "SubmodelElementList"
+            },
+            {
+              "idShort": "Outputs",
+              "orderRelevant": true,
+              "typeValueListElement": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "",
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://etri.re.kr/mdt/Submodel/Operation/Output/1/1"
+                      }
+                    ]
+                  },
+                  "value": [
+                    {
+                      "idShort": "OutputID",
+                      "valueType": "xs:string",
+                      "value": "Output",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "OutputValue",
+                      "valueType": "xs:int",
+                      "value": "0",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "OutputType",
+                      "valueType": "xs:string",
+                      "value": "INT",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                }
+              ],
+              "modelType": "SubmodelElementList"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "Operation",
+          "inputVariables": [
+            {
+              "value": {
+                "idShort": "Data",
+                "valueType": "xs:int",
+                "value": "0",
+                "modelType": "Property"
+              }
+            },
+            {
+              "value": {
+                "idShort": "IncAmount",
+                "valueType": "xs:int",
+                "value": "1",
+                "modelType": "Property"
+              }
+            },
+            {
+              "value": {
+                "idShort": "SleepTime",
+                "valueType": "xs:float",
+                "value": "3",
+                "modelType": "Property"
+              }
+            }
+          ],
+          "outputVariables": [
+            {
+              "value": {
+                "idShort": "Output",
+                "valueType": "xs:int",
+                "value": "0",
+                "modelType": "Property"
+              }
+            }
+          ],
+          "modelType": "Operation"
+        }
+      ],
+      "modelType": "Submodel"
+    }
+  ],
+  "conceptDescriptions": []
+}

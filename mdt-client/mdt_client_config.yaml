@@ -1,0 +1,6 @@
+---
+mdtEndpoint: "${env:MDT_ENDPOINT}"
+connectTimeout: "10s"
+readTimeout: "30s"
+# mqttEndpoint: "tcp://129.254.91.134:1883"
+workflowManagerEndpoint: "http://${env:LOCAL_HOST}:12989"

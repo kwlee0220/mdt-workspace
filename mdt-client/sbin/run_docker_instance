@@ -1,0 +1,14 @@
+#!	/bin/bash
+
+# 인자 개수 확인
+if [ $# -lt 2 ]; then
+  echo "ERROR: 인자가 부족합니다."
+  echo "사용법: $0 <이미지_이름> <포트_번호> [추가_인자]"
+  exit 1
+fi
+
+IMAGE_NAME=$1
+PORT=$2
+
+# docker run --rm -v $1:/mdt/mdt-instance -v $MDT_HOME/mdt-share:/mdt/mdt-share -p $2:$2 kwlee0220/mdt-instance:latest ${@:3}
+docker run --rm -p $PORT:$PORT $IMAGE_NAME ${@:3}
