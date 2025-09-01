@@ -1,0 +1,1228 @@
+[
+    {
+        "id": "697c14224449c8b2",
+        "type": "tab",
+        "label": "내함 검사",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fe37af70a47caacf",
+        "type": "tab",
+        "label": "내함 검사 (exec 버전)",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "695b483d83d6896e",
+        "type": "tab",
+        "label": "융착공정",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4b0cba4cd1f53ef1",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Arial,Arial,Helvetica,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Arial,Arial,Helvetica,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 40,
+                "sy": 40,
+                "gx": 2,
+                "gy": 2,
+                "cx": 2,
+                "cy": 2,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "95562c8f3f85bc3e",
+        "type": "global-config",
+        "name": "global-config",
+        "env": []
+    },
+    {
+        "id": "5767fec35e17fff5",
+        "type": "ui_spacer",
+        "z": "695b483d83d6896e",
+        "name": "spacer",
+        "group": "10eb2706cf131b12",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "f4e82dbc28e984f9",
+        "type": "ui_spacer",
+        "z": "695b483d83d6896e",
+        "name": "spacer",
+        "group": "10eb2706cf131b12",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "c76a0fb87552d454",
+        "type": "ui_spacer",
+        "z": "695b483d83d6896e",
+        "name": "spacer",
+        "group": "10eb2706cf131b12",
+        "order": 7,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "46c63abc996bfe93",
+        "type": "ui_spacer",
+        "z": "695b483d83d6896e",
+        "name": "spacer",
+        "group": "10eb2706cf131b12",
+        "order": 9,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "9069f4fac93e0685",
+        "type": "ui_spacer",
+        "z": "695b483d83d6896e",
+        "name": "spacer",
+        "group": "10eb2706cf131b12",
+        "order": 12,
+        "width": 18,
+        "height": 1
+    },
+    {
+        "id": "10eb2706cf131b12",
+        "type": "ui_group",
+        "name": "융착공정 ",
+        "tab": "8c6ed9ffd6104c82",
+        "order": 2,
+        "disp": true,
+        "width": 20,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "8c6ed9ffd6104c82",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0525ad85b00e1875",
+        "type": "watch-directory",
+        "z": "697c14224449c8b2",
+        "folder": "/home/kwlee/tmp/inspector",
+        "recursive": 0,
+        "typeEvent": "create",
+        "ignoreInitial": true,
+        "ignoredFiles": "",
+        "ignoredFilesType": "re",
+        "name": "내함 이미지 모니터",
+        "x": 130,
+        "y": 40,
+        "wires": [
+            [
+                "a2c6f14c87a2e439"
+            ]
+        ]
+    },
+    {
+        "id": "a2c6f14c87a2e439",
+        "type": "function",
+        "z": "697c14224449c8b2",
+        "name": "이미지 정보 구성",
+        "func": "msg = {\n    payload: {\n        filePath: msg.payload\n    }\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 40,
+        "wires": [
+            [
+                "082df7a00df308e0"
+            ]
+        ]
+    },
+    {
+        "id": "082df7a00df308e0",
+        "type": "upload file",
+        "z": "697c14224449c8b2",
+        "name": "이미지 등록",
+        "mdtEndpoint": "",
+        "reference": "param:inspector:UpperImage:ParameterValue",
+        "filePath": "",
+        "mimeType": "",
+        "x": 530,
+        "y": 40,
+        "wires": [
+            [
+                "cb0f9b4115881c56"
+            ]
+        ]
+    },
+    {
+        "id": "cb0f9b4115881c56",
+        "type": "invoke",
+        "z": "697c14224449c8b2",
+        "name": "두께 검사",
+        "mdtEndpoint": "",
+        "operationRef": "inspector:ThicknessInspection:Operation",
+        "poll": "1",
+        "timeout": "",
+        "inputArguments": "[{\"name\":\"UpperImage\",\"spec\":\"param:inspector:UpperImage:ParameterValue\"}]",
+        "outputArguments": "[{\"name\":\"Defect\",\"spec\":\"oparg:inspector:ThicknessInspection:out:Defect\"}]",
+        "inoutputArguments": "[]",
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "11feadc63974a28c"
+            ]
+        ]
+    },
+    {
+        "id": "11feadc63974a28c",
+        "type": "invoke",
+        "z": "697c14224449c8b2",
+        "name": "검사결과 누적",
+        "mdtEndpoint": "",
+        "operationRef": "inspector:UpdateDefectList:Operation",
+        "poll": "1",
+        "timeout": "",
+        "inputArguments": "[{\"name\":\"Defect\",\"spec\":\"oparg:inspector:ThicknessInspection:out:Defect\"},{\"name\":\"DefectList\",\"spec\":\"param:inspector:DefectList:ParameterValue\"}]",
+        "outputArguments": "[]",
+        "inoutputArguments": "[{\"name\":\"DefectList\",\"spec\":\"param:inspector:DefectList:ParameterValue\"}]",
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "ce22af84d4f26419"
+            ]
+        ]
+    },
+    {
+        "id": "ce22af84d4f26419",
+        "type": "invoke",
+        "z": "697c14224449c8b2",
+        "name": "CycleTime 갱신",
+        "mdtEndpoint": "",
+        "operationRef": "inspector:ProcessSimulation:Operation",
+        "poll": "1",
+        "timeout": "",
+        "inputArguments": "[{\"name\":\"DefectList\",\"spec\":\"param:inspector:DefectList:ParameterValue\"}]",
+        "outputArguments": "[{\"name\":\"AverageCycleTime\",\"spec\":\"param:inspector:CycleTime:ParameterValue\"}]",
+        "inoutputArguments": "[]",
+        "x": 180,
+        "y": 180,
+        "wires": [
+            [
+                "972d3e8d5c3199dc"
+            ]
+        ]
+    },
+    {
+        "id": "972d3e8d5c3199dc",
+        "type": "invoke",
+        "z": "697c14224449c8b2",
+        "name": "프로세스 최적화",
+        "mdtEndpoint": "",
+        "operationRef": "innercase:ProcessOptimization:Operation",
+        "poll": "1",
+        "timeout": "",
+        "inputArguments": "[{\"name\":\"HTCycleTime\",\"spec\":\"param:heater:CycleTime:ParameterValue\"},{\"name\":\"VFCycleTime\",\"spec\":\"param:former:CycleTime:ParameterValue\"},{\"name\":\"PTCycleTime\",\"spec\":\"param:trimmer:CycleTime:ParameterValue\"},{\"name\":\"QICycleTime\",\"spec\":\"param:inspector:CycleTime:ParameterValue\"}]",
+        "outputArguments": "[{\"name\":\"TotalThroughput\",\"spec\":\"param:innercase:CycleTime\"}]",
+        "inoutputArguments": "[]",
+        "x": 180,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b897421d533a856",
+        "type": "exec",
+        "z": "fe37af70a47caacf",
+        "command": "mdt set element param:inspector:UpperImage:ParameterValue --file ",
+        "addpay": "payload",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "내함 이미지 등록",
+        "x": 380,
+        "y": 60,
+        "wires": [
+            [
+                "331af65a641eb67a"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "331af65a641eb67a",
+        "type": "exec",
+        "z": "fe37af70a47caacf",
+        "command": "mdt run aas --operation inspector:ThicknessInspection:Operation --in.UpperImage param:inspector:UpperImage:ParameterValue --out.Defect oparg:inspector:ThicknessInspection:out:0",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "내함 이미지 검사",
+        "x": 580,
+        "y": 60,
+        "wires": [
+            [
+                "0e4027f7ab2d1584"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "0e4027f7ab2d1584",
+        "type": "exec",
+        "z": "fe37af70a47caacf",
+        "command": "mdt run aas --operation inspector:UpdateDefectList:Operation --in.Defect oparg:inspector:ThicknessInspection:out:0 --in.DefectList param:inspector:DefectList --out.DefectList param:inspector:DefectList",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "검사 결과 누적",
+        "x": 140,
+        "y": 160,
+        "wires": [
+            [
+                "68310a9ca9a7cbce"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "d58a7909d46c395b",
+        "type": "watch-directory",
+        "z": "fe37af70a47caacf",
+        "folder": "/home/kwlee/tmp/inspector",
+        "recursive": 0,
+        "typeEvent": "create",
+        "ignoreInitial": true,
+        "ignoredFiles": "",
+        "ignoredFilesType": "re",
+        "name": "내함 이미지 모니터",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "5b897421d533a856"
+            ]
+        ]
+    },
+    {
+        "id": "68310a9ca9a7cbce",
+        "type": "exec",
+        "z": "fe37af70a47caacf",
+        "command": "mdt run aas --operation inspector:ProcessSimulation:Operation --in.DefectList param:inspector:DefectList --out.AverageCycleTime param:inspector:CycleTime",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "CycleTime 계산",
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "9c82f777f2201836"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9c82f777f2201836",
+        "type": "exec",
+        "z": "fe37af70a47caacf",
+        "command": "mdt run aas --operation innercase:ProcessOptimization:Operation --in.HTCycleTime param:heater:CycleTime:ParameterValue --in.VFCycleTime param:heater:CycleTime:ParameterValue --in.PTCycleTime param:heater:CycleTime:ParameterValue --in.QICycleTime param:heater:CycleTime:ParameterValue --out.TotalThroughput param:innercase:CycleTime --loglevel info",
+        "addpay": "",
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "프로세스 최적화",
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c51f26afee506330",
+        "type": "inject",
+        "z": "695b483d83d6896e",
+        "name": "1초",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 60,
+        "wires": [
+            [
+                "e5f4c65301d104fd",
+                "a66a489a5ad40834",
+                "6bdf03039c20df1f"
+            ]
+        ]
+    },
+    {
+        "id": "e5f4c65301d104fd",
+        "type": "read sme",
+        "z": "695b483d83d6896e",
+        "name": "전류량 조회",
+        "mdtEndpoint": "",
+        "reference": "param:welder:Ampere:ParameterValue",
+        "outputType": "value",
+        "x": 290,
+        "y": 60,
+        "wires": [
+            [
+                "55c78b3a3ace4349"
+            ]
+        ]
+    },
+    {
+        "id": "a66a489a5ad40834",
+        "type": "read sme",
+        "z": "695b483d83d6896e",
+        "name": "작업상태 조회",
+        "mdtEndpoint": "",
+        "reference": "param:welder:Status:ParameterValue",
+        "outputType": "value",
+        "x": 290,
+        "y": 140,
+        "wires": [
+            [
+                "315c5ac27d0452f4"
+            ]
+        ]
+    },
+    {
+        "id": "6bdf03039c20df1f",
+        "type": "read sme",
+        "z": "695b483d83d6896e",
+        "name": "생산량 조회",
+        "mdtEndpoint": "",
+        "reference": "param:welder:NozzleProduction:ParameterValue.QuantityProduced",
+        "outputType": "value",
+        "x": 290,
+        "y": 200,
+        "wires": [
+            [
+                "b429778cb68daa55"
+            ]
+        ]
+    },
+    {
+        "id": "b87509cdbd0bbf79",
+        "type": "read sme",
+        "z": "695b483d83d6896e",
+        "name": "평균 작업시간 조회",
+        "mdtEndpoint": "",
+        "reference": "param:welder:NozzleProduction:ParameterValue.AvgProcessingTime",
+        "outputType": "value",
+        "x": 310,
+        "y": 320,
+        "wires": [
+            [
+                "991e9d404cda4eb8"
+            ]
+        ]
+    },
+    {
+        "id": "f524d367bf2b0fdc",
+        "type": "read sme",
+        "z": "695b483d83d6896e",
+        "name": "평균 대기시간 조회",
+        "mdtEndpoint": "",
+        "reference": "param:welder:NozzleProduction:ParameterValue.AvgWaitingTime",
+        "outputType": "value",
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "e201437e85f0b41d"
+            ]
+        ]
+    },
+    {
+        "id": "46fb3927add29f43",
+        "type": "read sme",
+        "z": "695b483d83d6896e",
+        "name": "추정 생산량 조회",
+        "mdtEndpoint": "",
+        "reference": "param:welder:TotalThroughput:ParameterValue",
+        "outputType": "value",
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "4cf6b12e0de16359"
+            ]
+        ]
+    },
+    {
+        "id": "991e9d404cda4eb8",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "형식 변환",
+        "func": "const utils = global.get('utils');\n\nconst dur = utils.parseDurationToSeconds(msg.payload).toFixed(1)\nmsg.topic = \"평균작업시간\"\nmsg.payload = parseFloat(dur)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 320,
+        "wires": [
+            [
+                "de7204156da7b2ef",
+                "3f79021f9f9a03db"
+            ]
+        ]
+    },
+    {
+        "id": "e201437e85f0b41d",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "형식 변환",
+        "func": "const utils = global.get('utils');\n\nconst dur = utils.parseDurationToSeconds(msg.payload).toFixed(1)\nmsg.topic = \"평균대기시간\"\nmsg.payload = parseFloat(dur)\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 380,
+        "wires": [
+            [
+                "d67bfe3f8213c5c5",
+                "3f79021f9f9a03db"
+            ]
+        ]
+    },
+    {
+        "id": "14da83d8167ece41",
+        "type": "ui_chart",
+        "z": "695b483d83d6896e",
+        "name": "전류량 추이",
+        "group": "10eb2706cf131b12",
+        "order": 2,
+        "width": 14,
+        "height": 6,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "3.5",
+        "ymax": "11.0",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55c78b3a3ace4349",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "자리수",
+        "func": "msg.payload = parseFloat(msg.payload.toFixed(2))\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 60,
+        "wires": [
+            [
+                "14da83d8167ece41",
+                "a4c755dfa320ab89"
+            ]
+        ]
+    },
+    {
+        "id": "a4c755dfa320ab89",
+        "type": "ui_gauge",
+        "z": "695b483d83d6896e",
+        "name": "전류량",
+        "group": "10eb2706cf131b12",
+        "order": 1,
+        "width": 6,
+        "height": 6,
+        "gtype": "gage",
+        "title": " 전류량",
+        "label": "A",
+        "format": "{{value}}",
+        "min": "3.5",
+        "max": "11.5",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9ea3d4502c91144d",
+        "type": "read sme",
+        "z": "695b483d83d6896e",
+        "name": "최근 생산 정보",
+        "mdtEndpoint": "",
+        "reference": "welder:NozzleProductionLog:Segments.Tail",
+        "outputType": "value",
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "93bdb148a0e5a7eb"
+            ]
+        ]
+    },
+    {
+        "id": "93bdb148a0e5a7eb",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "테이블 구성",
+        "func": "const utils = global.get('utils');\n\nvar records = Object.values(msg.payload.Records)\nrecords.forEach(rec => {\n    rec.AvgProcessingTime = utils.parseDurationToSeconds(rec.AvgProcessingTime);\n    rec.AvgWaitingTime = utils.parseDurationToSeconds(rec.AvgWaitingTime);\n    rec.AvgDefectRate = utils.toPercentage(rec.AvgDefectRate, 2);\n});\nmsg.payload = records;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 480,
+        "wires": [
+            [
+                "72865a22d73744bf"
+            ]
+        ]
+    },
+    {
+        "id": "72865a22d73744bf",
+        "type": "ui_table",
+        "z": "695b483d83d6896e",
+        "group": "10eb2706cf131b12",
+        "name": "최근 생산정보",
+        "order": 14,
+        "width": 20,
+        "height": 6,
+        "columns": [
+            {
+                "field": "Time",
+                "title": "Timestamp",
+                "width": "19%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "QuantityProduced",
+                "title": "생산량",
+                "width": "15%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "AvgProcessingTime",
+                "title": "평균처리시간 (초)",
+                "width": "19%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "AvgWaitingTime",
+                "title": "평균대기시간 (초)",
+                "width": "19%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "DefectVolume",
+                "title": "불량품 수",
+                "width": "13%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "AvgDefectRate",
+                "title": "불량률(%)",
+                "width": "13%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 530,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "e38a10797021fdad",
+        "type": "ui_button",
+        "z": "695b483d83d6896e",
+        "name": "Refresh",
+        "group": "10eb2706cf131b12",
+        "order": 13,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "Refresh",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 80,
+        "y": 420,
+        "wires": [
+            [
+                "9ea3d4502c91144d"
+            ]
+        ]
+    },
+    {
+        "id": "3f79021f9f9a03db",
+        "type": "ui_chart",
+        "z": "695b483d83d6896e",
+        "name": "작업시간",
+        "group": "10eb2706cf131b12",
+        "order": 11,
+        "width": 14,
+        "height": 7,
+        "label": "",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "8",
+        "ymax": "25",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#2ca02c",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 680,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de7204156da7b2ef",
+        "type": "ui_text",
+        "z": "695b483d83d6896e",
+        "group": "10eb2706cf131b12",
+        "order": 6,
+        "width": 5,
+        "height": 1,
+        "name": "평균작업시간",
+        "label": "평균 작업시간:",
+        "format": "{{msg.payload}} 초",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 690,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d67bfe3f8213c5c5",
+        "type": "ui_text",
+        "z": "695b483d83d6896e",
+        "group": "10eb2706cf131b12",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "name": "평균대기시간",
+        "label": "평균 대기시간: ",
+        "format": "{{msg.payload}} 초",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 690,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ae7a7b195d09b396",
+        "type": "inject",
+        "z": "695b483d83d6896e",
+        "name": "5초",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 320,
+        "wires": [
+            [
+                "b87509cdbd0bbf79",
+                "f524d367bf2b0fdc",
+                "46fb3927add29f43"
+            ]
+        ]
+    },
+    {
+        "id": "4cf6b12e0de16359",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "형식 변환",
+        "func": "msg.topic = \"추정 생산량\"\nmsg.payload = msg.payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 260,
+        "wires": [
+            [
+                "aff692fb4fd9a7d0"
+            ]
+        ]
+    },
+    {
+        "id": "b429778cb68daa55",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "형식 변환",
+        "func": "msg.topic = \"현재 생산량\"\nmsg.payload = msg.payload\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "aff692fb4fd9a7d0"
+            ]
+        ]
+    },
+    {
+        "id": "315c5ac27d0452f4",
+        "type": "ui_led",
+        "z": "695b483d83d6896e",
+        "order": 4,
+        "group": "10eb2706cf131b12",
+        "width": 3,
+        "height": 1,
+        "label": "작업상태",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "WORKING",
+                "valueType": "str"
+            },
+            {
+                "color": "#8e908e",
+                "value": "IDLE",
+                "valueType": "str"
+            },
+            {
+                "color": "#001900",
+                "value": "UNKNOwn",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "작업상태",
+        "x": 640,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "aff692fb4fd9a7d0",
+        "type": "ui_chart",
+        "z": "695b483d83d6896e",
+        "name": "노즐 생산량",
+        "group": "10eb2706cf131b12",
+        "order": 10,
+        "width": 6,
+        "height": 7,
+        "label": "",
+        "chartType": "bar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "3500",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab34aa2613b0c3dc",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "전류량",
+        "func": "msg.payload = msg.payload.parameters.Ampere.value.ParameterValue\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4aeb7a20228a380",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "작업상태",
+        "func": "const state = msg.payload.parameters.Status.value.ParameterValue\nmsg.payload = state === \"WORKING\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5625587a57162c8f",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "생산량",
+        "func": "msg.payload = msg.payload.parameters.NozzleProduction.value.ParameterValue.QuantityProduced\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f1567c47cb76dec",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "평균 작업시간",
+        "func": "const duration = global.get('duration');\nfunction parseDurationToSeconds(isoStr) {\n  const obj = duration.parse(isoStr);\n  return obj.hours * 3600 + obj.minutes * 60 + obj.seconds;\n}\n\nconst durStr = msg.payload.parameters.NozzleProduction.value.ParameterValue.AvgProcessingTime\nconst dur = parseDurationToSeconds(durStr)\nmsg = {\n    topic: \"작업시간\",\n    payload: dur\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef26ef9f94630b1f",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "평균 대기시간",
+        "func": "const duration = global.get('duration');\nfunction parseDurationToSeconds(isoStr) {\n  const obj = duration.parse(isoStr);\n  return obj.hours * 3600 + obj.minutes * 60 + obj.seconds;\n}\n\nconst durStr = msg.payload.parameters.NozzleProduction.value.ParameterValue.AvgWaitingTime\nconst dur = parseDurationToSeconds(durStr)\nmsg = {\n    topic: \"대기시간\",\n    payload: dur\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddbe5b887708c750",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "예측 생산량",
+        "func": "msg.payload = msg.payload.parameters.TotalThroughput.value.ParameterValue\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e0bcfdd06320ffad",
+        "type": "function",
+        "z": "695b483d83d6896e",
+        "name": "노즐 생산 상황",
+        "func": "const record = msg.payload.parameters.NozzleProduction.value.ParameterValue\n\nconst duration = global.get('duration');\nfunction parseDurationToSeconds(isoStr) {\n  const obj = duration.parse(isoStr);\n  return obj.hours * 3600 + obj.minutes * 60 + obj.seconds;\n}\n\nrecord.AvgDefectRate = Number(record.AvgDefectRate.toFixed(2));\nrecord.AvgProcessingTime = parseDurationToSeconds(record.AvgProcessingTime);\nrecord.AvgWaitingTime = parseDurationToSeconds(record.AvgWaitingTime);\n\nmsg.payload = [record]\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee749abb3167525a",
+        "type": "read mdtmodel",
+        "z": "695b483d83d6896e",
+        "name": "MDTModel",
+        "mdtEndpoint": "",
+        "instanceId": "welder",
+        "x": 150,
+        "y": 700,
+        "wires": [
+            [
+                "ab34aa2613b0c3dc",
+                "b4aeb7a20228a380",
+                "5625587a57162c8f",
+                "ddbe5b887708c750",
+                "3f1567c47cb76dec",
+                "ef26ef9f94630b1f",
+                "e0bcfdd06320ffad"
+            ]
+        ]
+    }
+]

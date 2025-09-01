@@ -1,0 +1,85 @@
+
+Docker 설치
+------------------------
+sudo apt update
+sudo apt install -y docker.io
+docker --version
+sudo systemctl enable --now docker
+sudo usermod -aG docker $USER
+
+# 터미털을 닫았다가 다시 열기
+
+Docker 동작 확인
+------------------------
+docker run hello-world
+
+
+Minikube 설치:
+------------------------
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+Minikube 자동 실행 설정:
+------------------------
+minikube config set driver docker
+
+Minikube 실행:
+------------------------
+minikube start #--driver=docker
+
+
+kubectl 설치
+------------------------
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x kubectl
+sudo mv kubectl /usr/local/bin/
+kubectl get nodes
+
+
+ARGO CLI 설치
+------------------------
+ARGO_OS=linux
+ARGO_VERSION=v3.6.5
+
+# Download the binary
+curl -sLO "https://github.com/argoproj/argo-workflows/releases/download/$ARGO_VERSION/argo-$ARGO_OS-amd64.gz"
+
+# Unzip
+gunzip "argo-$ARGO_OS-amd64.gz"
+
+# Make binary executable
+chmod +x "argo-$ARGO_OS-amd64"
+
+# Move binary to path
+sudo mv "./argo-$ARGO_OS-amd64" /usr/local/bin/argo
+
+# Test installation
+argo version
+
+
+Argo Workflows 설치:
+------------------------
+kubectl create namespace argo
+kubectl apply -n argo -f "https://github.com/argoproj/argo-workflows/releases/download/${ARGO_VERSION}/install.yaml"
+
+확인:
+------------------------
+kubectl get pods -n argo
+
+
+인증 없이 접근 (--auth-mode=server)
+------------------------
+kubectl patch deployment -n argo argo-server --type='json' \
+-p='[{"op": "replace", "path": "/spec/template/spec/containers/0/args", "value": ["server", "--auth-mode=server"]}]'
+
+
+Argo UI 접근
+------------------------
+kubectl -n argo port-forward deployment/argo-server 2746:2746
+
+
+예제 워크플로우 실행:
+------------------------
+argo submit -n argo --watch https://raw.githubusercontent.com/argoproj/argo-workflows/master/examples/hello-world.yaml
+
+https://localhost:2746
