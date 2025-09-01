@@ -1,4 +1,6 @@
 /bundles/
 /instances/
+
 *.log
-*/mdt-*.jar
+mdt-*.jar
+*.db

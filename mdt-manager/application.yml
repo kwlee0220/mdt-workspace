@@ -1,0 +1,70 @@
+spring:
+  application:
+    name: MDTManager
+  devtools:
+    restart:
+      enabled: false
+  servlet:
+    multipart:
+      maxFileSize: 200MB
+      maxRequestSize: 200MB
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mdt
+    username: mdt
+    password: mdt2025
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+      
+server:
+  host: ${LOCAL_HOST:localhost}
+  port: 12985
+  error:
+    include-message: always
+
+springdoc:
+  swagger-ui:
+    operationsSorter: alpha
+    tagsSorter: alpha
+
+logging:
+  config: file:${instance-manager.homeDir}/logback.xml
+
+
+rootDir: ${MDT_HOME}
+
+instance-manager:
+  type: jar
+  # type: external
+  endpoint: http://${server.host}:12985
+  homeDir: ${rootDir}/mdt-manager
+  bundlesDir: ${rootDir}/bundles
+  instancesDir: ${rootDir}/instances
+  defaultMDTInstanceJarFile: ${instance-manager.homeDir}/mdt-instance-all.jar
+  # instanceEndpointFormat: https://${server.host}:%d/api/v3.0
+  # globalConfigFile: ${instance-manager.homeDir}/mdt_global_config.json
+  keyStoreFile: ${instance-manager.homeDir}/mdt_cert.p12
+   
+executor:
+  workspaceDir: ${rootDir}/instances
+  sampleInterval: 2s
+  startTimeout: 1m
+  startConcurrency: 7
+  heapSize: 512m
+
+external:
+  checkInterval: 10s
+  connectionTimeout: 1m
+
+docker:
+  dockerEndpoint: http://${server.host}:2375
+  imageName: kwlee0220/faaast-starter
+  
+harbor:
+  host: docker.zento.co.kr
+  endpoint: https://${harbor.host}/api/v2.0
+  project: mdt-twins
+  user: etri
+  password: zento
