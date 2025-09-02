@@ -1,0 +1,11 @@
+{
+	"commandLine": [
+		"python3",
+		"process_optimization.py",
+		"${HTCycleTime:path}",
+		"${VFCycleTime:path}",
+		"${PTCycleTime:path}",
+		"${QICycleTime:path}",
+		"--output", "${TotalThroughput:path}"
+	]
+}

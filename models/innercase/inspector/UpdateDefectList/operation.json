@@ -1,0 +1,10 @@
+{
+	"commandLine": [
+		"python3",
+		"update_defect_list.py",
+		"${Defect:path}",
+		"${DefectList:path}",
+		"--output", "${UpdatedDefectList:path}"
+	],
+	"submodel": "inspector/UpdateDefectList"
+}

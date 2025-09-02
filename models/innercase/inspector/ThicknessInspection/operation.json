@@ -1,0 +1,9 @@
+{
+	"commandLine": [
+		"python3",
+		"thickness_inspection.py",
+		"${UpperImage:path}",
+		"--output", "${Defect:path}"
+	],
+	"submodel": "inspector/ThicknessInspection"
+}

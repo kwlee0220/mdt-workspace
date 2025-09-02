@@ -1,0 +1,25 @@
+{
+  "id": "inspector",
+  "managerEndpoint": "http://${env:LOCAL_HOST}:12985",
+  "instanceEndpoint": "https://${env:LOCAL_HOST}:19002/api/v3.0",
+  "globalConfigFile": "${env:MDT_HOME}/share/mdt_global_config.json",
+  "keyStoreFile": "${env:MDT_HOME}/share/mdt_cert.p12",
+
+  "persistenceStacks": [
+    {
+      "@class" : "mdt.persistence.mqtt.MqttPublishingPersistence",
+      "publishers": [
+        { "topic": "mdt/inspector/parameters/UpperImage", "element": "param:UpperImage" }
+      ]
+    }
+  ],
+  "operations": {
+    "programOperations" : [
+      { "operation": "ThicknessInspection:Operation", "descriptorFile": "ThicknessInspection/operation.json" },
+      { "operation": "ProcessSimulation:Operation", "descriptorFile": "ProcessSimulation/operation.json" }
+    ],
+    "javaOperations": [
+      { "operation": "UpdateDefectList:Operation", "className": "mdt.ext.UpdateDefectList" }
+    ]
+  }
+}
