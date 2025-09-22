@@ -1,9 +1,0 @@
-{
-	"commandLine": [
-		"python3",
-		"process_simulation.py",
-		"${DefectList:path}",
-		"--output", "${AverageCycleTime:path}"
-	],
-	"submodel": "inspector/ProcessSimulation"
-}
