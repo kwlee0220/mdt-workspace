@@ -1,9 +1,0 @@
-{
-	"commandLine": [
-		"python3",
-		"estimate_throughput.py",
-		"--timestamp", "${Timestamp:value}",
-		"--nozzleProduction", "${NozzleProduction:value}",
-		"--outputFile", "${TotalThroughput:path}"
-	]
-}

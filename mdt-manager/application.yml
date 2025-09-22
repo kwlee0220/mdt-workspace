@@ -19,7 +19,7 @@ spring:
     open-in-view: false
       
 server:
-  host: ${LOCAL_HOST:localhost}
+  host: ${LOCAL_HOST:-localhost}
   port: 12985
   error:
     include-message: always
@@ -43,8 +43,6 @@ instance-manager:
   bundlesDir: ${rootDir}/bundles
   instancesDir: ${rootDir}/instances
   defaultMDTInstanceJarFile: ${instance-manager.homeDir}/mdt-instance-all.jar
-  # instanceEndpointFormat: https://${server.host}:%d/api/v3.0
-  # globalConfigFile: ${instance-manager.homeDir}/mdt_global_config.json
   keyStoreFile: ${instance-manager.homeDir}/mdt_cert.p12
    
 executor:
@@ -52,7 +50,8 @@ executor:
   sampleInterval: 2s
   startTimeout: 1m
   startConcurrency: 7
-  heapSize: 512m
+  # heapSize: 512m
+  heapSize: 256m
 
 external:
   checkInterval: 10s

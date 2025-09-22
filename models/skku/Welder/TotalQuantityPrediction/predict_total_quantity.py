@@ -51,7 +51,6 @@ class NozzleProductionAudit:
         )
 
 def define_args(parser):
-    parser.add_argument("--timestamp", type=str, required=True)
     parser.add_argument("--nozzleProduction", type=str, required=True)
     parser.add_argument("--outputFile", type=str, required=True)
     
@@ -374,13 +373,12 @@ def read_audit_csv(file_path: str, delimiter: str = ",") -> Generator[NozzleProd
                 continue
 
 def run(args):
-    print(f'input[Timestamp]: {args.timestamp}')
     print(f'input[nozzleProduction]: {args.nozzleProduction}')
     print('--------------------------------------------------')
 
-    timestamp_str = json.loads(args.timestamp)
     input = json.loads(args.nozzleProduction)
-    input['Timestamp'] = iso8601_to_datetime(timestamp_str)
+    ts = input['Timestamp']
+    input['Timestamp'] = iso8601_to_datetime(ts)
     input['AvgProcessingTime'] = isodate.parse_duration(input['AvgProcessingTime']).total_seconds()
     input['AvgWaitingTime'] = isodate.parse_duration(input['AvgWaitingTime']).total_seconds()
     input['AvgDefectRate'] = float(input['AvgDefectRate'])
@@ -389,9 +387,10 @@ def run(args):
     audit = NozzleProductionAudit(**input)
     print(f"Processing audit: {audit}")
 
-    throughput = estimate_throughput(audit)
+    throughput:int = int(round(estimate_throughput(audit)))
     with open(args.outputFile, 'w') as f:
-        result = json.dumps({ 'ParameterValue': f'{throughput}', 'EventDateTime':  timestamp_str })
+        # result = json.dumps({ 'Value': f'{throughput}', 'Timestamp':  ts })
+        result = json.dumps(throughput)
         f.write(result)
         print(f"Estimated throughput: {result}")
 

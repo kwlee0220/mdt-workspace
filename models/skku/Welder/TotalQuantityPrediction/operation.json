@@ -1,0 +1,8 @@
+{
+	"commandLine": [
+		"python3",
+		"predict_total_quantity.py",
+		"--nozzleProduction", "${NozzleProduction:value}",
+		"--outputFile", "${TotalQuantityPrediction:path}"
+	]
+}

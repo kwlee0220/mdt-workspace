@@ -151,7 +151,114 @@
                     "name": "https",
                     "version": "V11"
                   },
-                  "host": "129.254.91.134:19000",
+                  "host": "10.254.91.134:19000",
+                  "path": "/api/v3.0/submodels/aHR0cDovL21kdC5ldHJpLnJlLmtyL21kdC9UZXN0L3NtL0RhdGE=/submodel-elements/DataInfo.Equipment.EquipmentParameterValues"
+                },
+                "id": "56facb4c-d683-4671-974d-feffa4a10293",
+                "name": "GetSubmodelElementByPath",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "10.254.91.134:19304",
+                  "path": "/api/v3.0/submodels/aHR0cHM6Ly93d3cuc2FtY2hlb24uY29tL1dlbGRlci9zbS9EYXRh/submodel-elements/DataInfo.Equipment.EquipmentParameterValues[0].ParameterValue/$value"
+                },
+                "id": "68100ce7-99a4-4779-bec3-455943069d97",
+                "name": "GetSubmodelElementValueByPath",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc5789",
+                  "name": "PATCH"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
+                  "textBody": "{\n    \"Ampere\" : 99.0,\n    \"Timestamp\" : \"2023-05-25T23:58:59+09:00\"\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "10.254.91.134:19304",
+                  "path": "/api/v3.0/submodels/aHR0cHM6Ly93d3cuc2FtY2hlb24uY29tL1dlbGRlci9zbS9EYXRh/submodel-elements/DataInfo.Equipment.EquipmentParameterValues[0].ParameterValue/$value"
+                },
+                "id": "218f6f98-ea58-467f-b8b8-c200b0fe7e7a",
+                "name": "PatchSubmodelElementValueByPath",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:19000",
                   "path": "/api/v3.0/submodels"
                 },
                 "id": "6bddaa5f-959e-4c23-9cb7-1a2647e52bda",
@@ -184,11 +291,44 @@
                     "name": "https",
                     "version": "V11"
                   },
-                  "host": "129.254.91.134:19000",
-                  "path": "/api/v3.0/submodels/aHR0cDovL21kdC5ldHJpLnJlLmtyL21kdC9UZXN0L3NtL0RhdGE=/submodel-elements/DataInfo.Equipment.EquipmentParameterValues%5B1%5D.ParameterValue"
+                  "host": "localhost:19002",
+                  "path": "/api/v3.0/submodels/aHR0cDovL3d3dy5sZy5jby5rci9yZWZyaWdlcmF0b3IvSW5uZXJjYXNlL1F1YWxpdHlJbnNwZWN0b3IvRGF0YQ==/submodel-elements/DataInfo.Equipment.EquipmentParameterValues%5B2%5D.ParameterValue/attachment"
                 },
-                "id": "b92a801e-a8f1-443b-9c1f-fad93feb3061",
-                "name": "mdt get element param:test:IncAmount:ParameterValue",
+                "id": "ea0073c8-6362-46a0-9dc0-e7ac146e57ae",
+                "name": "mdt get element (Image)",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:19001",
+                  "path": "/api/v3.0/submodels/aHR0cHM6Ly93d3cuc2FtY2hlb24uY29tL21kdC9XZWxkZXIvc20vVGltZVNlcmllcy9Ob3p6bGVQcm9kdWN0aW9uTG9n/submodel-elements/Segments.Tail"
+                },
+                "id": "679e0257-34c9-468f-ae6e-97c9c6c0dd3d",
+                "name": "mdt get element (TimeSeries)",
                 "headers": []
               }
             },
@@ -218,10 +358,10 @@
                     "version": "V11"
                   },
                   "host": "localhost:19000",
-                  "path": "/api/v3.0/submodels/aHR0cDovL21kdC5ldHJpLnJlLmtyL21kdC9UZXN0L3NtL0RhdGE=/submodel-elements/DataInfo.Equipment.EquipmentParameterValues%5B1%5D.ParameterValue"
+                  "path": "/api/v3.0/submodels/aHR0cDovL21kdC5ldHJpLnJlLmtyL21kdC9UZXN0L3NtL0RhdGE=/submodel-elements/DataInfo.Equipment.EquipmentParameterValues%5B1%5D.ParameterValue/$value"
                 },
-                "id": "56facb4c-d683-4671-974d-feffa4a10293",
-                "name": "mdt get element param:welder:NozzleProduction:QuantityProduced",
+                "id": "b92a801e-a8f1-443b-9c1f-fad93feb3061",
+                "name": "mdt get element param:test:IncAmount:ParameterValue",
                 "headers": []
               }
             },
@@ -868,7 +1008,7 @@
                     "version": "V11"
                   },
                   "host": "localhost:12985",
-                  "path": "/instance-manager/instances/welder/model/operations"
+                  "path": "/instance-manager/instances/test/model/operations"
                 },
                 "id": "bb3201fa-8865-41ac-b935-fe7201072374",
                 "name": "Get MDTModel (Operations)",
@@ -900,7 +1040,7 @@
                     "version": "V11"
                   },
                   "host": "localhost:12985",
-                  "path": "/instance-manager/instances/welder/model/parameters"
+                  "path": "/instance-manager/instances/Welder/model/parameters"
                 },
                 "id": "7833794f-4b03-44c7-859e-c988254916bb",
                 "name": "Get MDTModel (Parameters)",
@@ -932,7 +1072,7 @@
                     "version": "V11"
                   },
                   "host": "localhost:12985",
-                  "path": "/instance-manager/instances/welder/model/submodels"
+                  "path": "/instance-manager/instances/test/model/submodels"
                 },
                 "id": "4e006f05-f14a-4934-9aca-8017f45237b7",
                 "name": "Get MDTModel (Submodels)",
@@ -964,7 +1104,7 @@
                     "version": "V11"
                   },
                   "host": "localhost:12985",
-                  "path": "/instance-manager/instances/welder/model/compositions"
+                  "path": "/instance-manager/instances/WeldingProcess/model/compositions"
                 },
                 "id": "513323c3-9e37-4c9b-ad53-cfa81532b244",
                 "name": "Get MDTModel (TwinCompositions)",
@@ -1157,7 +1297,7 @@
                       {
                         "enabled": true,
                         "name": "ref",
-                        "value": "param:welder:TimedCurrent.Ampere"
+                        "value": "param:Welder:TimedCurrent"
                       }
                     ]
                   },
@@ -1493,6 +1633,52 @@
                     "items": []
                   },
                   "bodyType": "Text",
+                  "textBody": "{\n  \"Timestamp\": \"2023-05-25T23:58:59\",\n  \"Ampere\": 77.77\n}"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "name": "ref",
+                        "value": "param:Welder:TimedCurrent"
+                      }
+                    ]
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:12985",
+                  "path": "/instance-manager/submodel-element/$value"
+                },
+                "id": "286b2354-97fc-44be-958f-18d8348acaf1",
+                "name": "Update Composite Value of Reference",
+                "headers": [
+                  {
+                    "enabled": true,
+                    "name": "Content-Type",
+                    "value": "application/json"
+                  }
+                ]
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "requestBody": true,
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.4",
+                  "name": "PUT"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text",
                   "textBody": "{\n  \"modelType\" : \"Property\",\n  \"value\" : \"77\",\n  \"valueType\" : \"xs:int\",\n  \"idShort\" : \"ParameterValue\"\n}"
                 },
                 "uri": {
@@ -1730,6 +1916,188 @@
                 },
                 "id": "dd2706b0-6232-41bb-9f8b-fb0e3a9cb6e8",
                 "name": "Get SubmodelDescriptor",
+                "headers": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "entity": {
+        "type": "Project",
+        "id": "9009ca39-171c-42c1-afcb-3a62896ab6b1",
+        "name": "Others"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Service",
+            "id": "4d81c0ba-1fc4-4575-8a20-d4f1d82a28bb",
+            "name": "Test"
+          },
+          "children": [
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "10.254.91.134:19000",
+                  "path": "/api/v3.0/submodels/aHR0cDovL21kdC5ldHJpLnJlLmtyL21kdC9UZXN0L3NtL0RhdGE=/submodel-elements/DataInfo.Equipment.EquipmentParameterValues[1].ParameterValue"
+                },
+                "id": "c743c2b2-6745-47a5-bd5a-12f22dafef04",
+                "name": "Request 1",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "secure": true,
+                    "name": "https",
+                    "version": "V11"
+                  },
+                  "host": "localhost:19001",
+                  "path": "/api/v3.0/submodels/aHR0cHM6Ly9hZG1pbi1zaGVsbC5pby9pZHRhL1N1Ym1vZGVsVGVtcGxhdGUvVGltZVNlcmllcy8xLzE="
+                },
+                "id": "0758536d-77e6-41d3-8f74-ed3404927d0b",
+                "name": "Request 2",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": [
+                      {
+                        "enabled": true,
+                        "name": "ref",
+                        "value": "param:inspector:UpperImage"
+                      }
+                    ]
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "localhost:12985",
+                  "path": "/instance-manager/submodel-element"
+                },
+                "id": "6fb3367c-3538-4eb7-a2e4-0ccafeefe224",
+                "name": "Request 3",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "218.150.183.76:10007",
+                  "path": "/api/v1/hello.py"
+                },
+                "id": "8182b7d5-599f-49ab-9080-08d191c4f05c",
+                "name": "과기대 접속",
+                "headers": []
+              }
+            },
+            {
+              "entity": {
+                "type": "Request",
+                "method": {
+                  "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+                  "name": "GET"
+                },
+                "body": {
+                  "formBody": {
+                    "overrideContentType": true,
+                    "encoding": "application/x-www-form-urlencoded",
+                    "items": []
+                  },
+                  "bodyType": "Text"
+                },
+                "uri": {
+                  "query": {
+                    "delimiter": "&",
+                    "items": []
+                  },
+                  "scheme": {
+                    "name": "http",
+                    "version": "V11"
+                  },
+                  "host": "218.150.183.76:10007",
+                  "path": "/api/v1/hello.py"
+                },
+                "id": "a012eedf-47aa-4cb7-9c6c-79d4c0822306",
+                "name": "성균관대 접속",
                 "headers": []
               }
             }

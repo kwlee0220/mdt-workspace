@@ -5,13 +5,14 @@
   "globalConfigFile": "${env:MDT_HOME}/share/mdt_global_config.json",
   "keyStoreFile": "${env:MDT_HOME}/share/mdt_cert.p12",
 
-  "mdtEndpoints": {
+  "serviceEndpoints": {
     "mqtt":{
       "subscribers": [
         { "topic": "mdt/test/parameters/Data", "element": "param:Data" }
       ]
     }
   },
+
   "operations": {
     "programOperations" : [
       { "operation": "AddAndSleep:Operation", "descriptorFile": "AddAndSleep/operation.json" }

@@ -1,0 +1,1480 @@
+{
+  "assetAdministrationShells": [
+    {
+      "modelType": "AssetAdministrationShell",
+      "assetInformation": {
+        "assetKind": "Instance",
+        "globalAssetId": "https://www.samcheon.com/asset/Welder"
+      },
+      "submodels": [
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://www.samcheon.com/Welder/sm/InformationModel"
+            }
+          ],
+          "type": "ModelReference"
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://www.samcheon.com/Welder/sm/Data"
+            }
+          ],
+          "type": "ModelReference"
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://www.samcheon.com/mdt/Welder/sm/Simulation/TotalQuantityPrediction"
+            }
+          ],
+          "type": "ModelReference"
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://www.samcheon.com/mdt/Welder/sm/TimeSeries/WelderAmpereLog"
+            }
+          ],
+          "type": "ModelReference"
+        },
+        {
+          "keys": [
+            {
+              "type": "Submodel",
+              "value": "https://www.samcheon.com/mdt/Welder/sm/TimeSeries/NozzleProductionLog"
+            }
+          ],
+          "type": "ModelReference"
+        }
+      ],
+      "id": "https://www.samcheon.com/Welder",
+      "category": "CONSTANT",
+      "idShort": "Welder"
+    }
+  ],
+  "submodels": [
+    {
+      "modelType": "Submodel",
+      "kind": "Instance",
+      "semanticId": {
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://etri.re.kr/mdt/Submodel/Data/1/1"
+          }
+        ],
+        "type": "ExternalReference"
+      },
+      "id": "https://www.samcheon.com/Welder/sm/Data",
+      "category": "CONSTANT",
+      "idShort": "Data",
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "SubModelInfo",
+          "value": [
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "idShort": "Title"
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "idShort": "Creator"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "DataInfo",
+          "value": [
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "Equipment",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "value": "Welder",
+                  "valueType": "xs:string",
+                  "idShort": "EquipmentID"
+                },
+                {
+                  "modelType": "Property",
+                  "value": "진동 융착",
+                  "valueType": "xs:string",
+                  "idShort": "EquipmentName"
+                },
+                {
+                  "modelType": "SubmodelElementList",
+                  "idShort": "EquipmentParameters",
+                  "orderRelevant": true,
+                  "typeValueListElement": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "idShort": "TimedCurrent",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/Parameter/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "TimedCurrent",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterName",
+                          "valueType": "xs:string",
+                          "value": "소모 전류량",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterType",
+                          "valueType": "xs:string",
+                          "value": "COLLECTION",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EquipmentID",
+                          "valueType": "xs:string",
+                          "value": "Welder",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "idShort": "Status",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/Parameter/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "Status",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterName",
+                          "valueType": "xs:string",
+                          "value": "설비 동작 상태",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterType",
+                          "valueType": "xs:string",
+                          "value": "STRING",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EquipmentID",
+                          "valueType": "xs:string",
+                          "value": "Welder",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "PeriodicDataCollectionIndicator",
+                          "valueType": "xs:string",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "idShort": "NozzleProduction",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/Parameter/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "NozzleProduction",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterName",
+                          "valueType": "xs:string",
+                          "value": "워터 노즐 생산 정보",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterType",
+                          "valueType": "xs:string",
+                          "value": "COLLECTION",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EquipmentID",
+                          "valueType": "xs:string",
+                          "value": "Welder",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "modelType": "SubmodelElementCollection",
+                      "value": [
+                        {
+                          "modelType": "Property",
+                          "value": "TotalQuantityPrediction",
+                          "valueType": "xs:string",
+                          "idShort": "ParameterID"
+                        },
+                        {
+                          "modelType": "Property",
+                          "value": "예측 생산량",
+                          "valueType": "xs:string",
+                          "idShort": "ParameterName"
+                        },
+                        {
+                          "modelType": "Property",
+                          "value": "INT",
+                          "valueType": "xs:string",
+                          "idShort": "ParameterType"
+                        },
+                        {
+                          "modelType": "Property",
+                          "value": "Welder",
+                          "valueType": "xs:string",
+                          "idShort": "EquipmentID"
+                        },
+                        {
+                          "modelType": "Property",
+                          "valueType": "xs:string",
+                          "idShort": "PeriodicDataCollectionIndicator"
+                        }
+                      ],
+                      "idShort": "TotalQuantityPrediction"
+                    }
+                  ],
+                  "valueTypeListElement": "xs:anyURI"
+                },
+                {
+                  "modelType": "SubmodelElementList",
+                  "idShort": "EquipmentParameterValues",
+                  "orderRelevant": true,
+                  "typeValueListElement": "SubmodelElementCollection",
+                  "value": [
+                    {
+                      "idShort": "TimedCurrent",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/ParameterValue/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "TimedCurrent",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EventDateTime",
+                          "category": "VARIABLE",
+                          "valueType": "xs:dateTime",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterValue",
+                          "category": "VARIABLE",
+                          "value": [
+                            {
+                              "idShort": "Timestamp",
+                              "valueType": "xs:dateTime",
+                              "modelType": "Property"
+                            },
+                            {
+                              "idShort": "Ampere",
+                              "valueType": "xs:float",
+                              "modelType": "Property"
+                            }
+                          ],
+                          "modelType": "SubmodelElementCollection"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "idShort": "Status",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/ParameterValue/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "Status",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EventDateTime",
+                          "category": "VARIABLE",
+                          "valueType": "xs:dateTime",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterValue",
+                          "category": "VARIABLE",
+                          "valueType": "xs:string",
+                          "modelType": "Property"
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "idShort": "NozzleProduction",
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://etri.re.kr/mdt/Submodel/Data/ParameterValue/1/1"
+                          }
+                        ]
+                      },
+                      "value": [
+                        {
+                          "idShort": "ParameterID",
+                          "valueType": "xs:string",
+                          "value": "NozzleProduction",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "EventDateTime",
+                          "category": "VARIABLE",
+                          "valueType": "xs:dateTime",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "ParameterValue",
+                          "category": "VARIABLE",
+                          "modelType": "SubmodelElementCollection",
+                          "value": [
+                            {
+                              "idShort": "Timestamp",
+                              "valueType": "xs:dateTime",
+                              "modelType": "Property"
+                            },
+                            {
+                              "idShort": "QuantityProduced",
+                              "valueType": "xs:int",
+                              "value": "0",
+                              "modelType": "Property"
+                            },
+                            {
+                              "idShort": "AvgProcessingTime",
+                              "valueType": "xs:duration",
+                              "value": "PT0S",
+                              "modelType": "Property"
+                            },
+                            {
+                              "idShort": "AvgWaitingTime",
+                              "valueType": "xs:duration",
+                              "value": "PT0S",
+                              "modelType": "Property"
+                            },
+                            {
+                              "idShort": "DefectVolume",
+                              "valueType": "xs:int",
+                              "value": "0",
+                              "modelType": "Property"
+                            },
+                            {
+                              "idShort": "AvgDefectRate",
+                              "valueType": "xs:float",
+                              "value": "0.0",
+                              "modelType": "Property"
+                            }
+                          ]
+                        }
+                      ],
+                      "modelType": "SubmodelElementCollection"
+                    },
+                    {
+                      "modelType": "SubmodelElementCollection",
+                      "value": [
+                        {
+                          "modelType": "Property",
+                          "value": "Welder",
+                          "valueType": "xs:string",
+                          "idShort": "EquipmentID"
+                        },
+                        {
+                          "modelType": "Property",
+                          "value": "TotalQuantityPrediction",
+                          "valueType": "xs:string",
+                          "idShort": "ParameterID"
+                        },
+                        {
+                          "modelType": "Property",
+                          "valueType": "xs:dateTime",
+                          "idShort": "EventDateTime"
+                        },
+                        {
+                          "modelType": "Property",
+                          "value": "0",
+                          "valueType": "xs:int",
+                          "idShort": "ParameterValue"
+                        }
+                      ],
+                      "idShort": "TotalQuantityPrediction"
+                    }
+                  ],
+                  "valueTypeListElement": "xs:anyURI"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modelType": "Submodel",
+      "kind": "Instance",
+      "semanticId": {
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://etri.re.kr/mdt/Submodel/InformationModel/1/1"
+          }
+        ],
+        "type": "ExternalReference"
+      },
+      "id": "https://www.samcheon.com/Welder/sm/InformationModel",
+      "category": "CONSTANT",
+      "idShort": "InformationModel",
+      "submodelElements": [
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "MDTInfo",
+          "value": [
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "자산 이름"
+                }
+              ],
+              "idShort": "AssetName",
+              "value": "진동 융착"
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "트윈화 대상 자산 타입 (Machine, Process, Line, Factory)"
+                }
+              ],
+              "idShort": "AssetType",
+              "value": "Machine"
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "MDT 모델의 현재 상태 (Created, Registered, Executed)"
+                }
+              ],
+              "idShort": "Status"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "AssetDescription",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "valueType": "xs:string",
+                  "description": [
+                    {
+                      "language": "Korean",
+                      "text": "MDT 생성 목적"
+                    }
+                  ],
+                  "idShort": "Purpose"
+                },
+                {
+                  "modelType": "Property",
+                  "valueType": "xs:string",
+                  "description": [
+                    {
+                      "language": "Korean",
+                      "text": "MDT 생성 일자"
+                    }
+                  ],
+                  "idShort": "CreationDate"
+                },
+                {
+                  "modelType": "Property",
+                  "valueType": "xs:string",
+                  "description": [
+                    {
+                      "language": "Korean",
+                      "text": "MDT 풀 등록 일자"
+                    }
+                  ],
+                  "idShort": "RegistrationDate"
+                },
+                {
+                  "modelType": "Property",
+                  "valueType": "xs:string",
+                  "description": [
+                    {
+                      "language": "Korean",
+                      "text": "MDT 실행 일자"
+                    }
+                  ],
+                  "idShort": "ExecutionDate"
+                }
+              ]
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "URI 등으로 표현되는 MDT ID"
+                }
+              ],
+              "idShort": "IdShort"
+            },
+            {
+              "modelType": "SubmodelElementCollection",
+              "idShort": "AsssetInformationInFactory",
+              "value": [
+                {
+                  "modelType": "Property",
+                  "valueType": "xs:string",
+                  "description": [
+                    {
+                      "language": "Korean",
+                      "text": "공장에서 관리하는 자산 ID"
+                    }
+                  ],
+                  "idShort": "AssetIDinFactory"
+                },
+                {
+                  "modelType": "Property",
+                  "valueType": "xs:string",
+                  "description": [
+                    {
+                      "language": "Korean",
+                      "text": "공장에서 부여한 자산명"
+                    }
+                  ],
+                  "idShort": "AssetNameInFactory"
+                },
+                {
+                  "modelType": "Property",
+                  "valueType": "xs:string",
+                  "description": [
+                    {
+                      "language": "Korean",
+                      "text": "자산 위치"
+                    }
+                  ],
+                  "idShort": "AssetLocationInFactory"
+                }
+              ]
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "MDT 대표 설명 주제어"
+                }
+              ],
+              "idShort": "Subject"
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "MDT에 대한 설명"
+                }
+              ],
+              "idShort": "Description"
+            }
+          ]
+        },
+        {
+          "modelType": "SubmodelElementCollection",
+          "idShort": "TwinComposition",
+          "value": [
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "트윈 조합 식별자"
+                }
+              ],
+              "idShort": "CompositionID"
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "트윈조합 타입"
+                }
+              ],
+              "idShort": "CompositionType"
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "트윈 조합 생성자"
+                }
+              ],
+              "idShort": "CompositionCreator"
+            },
+            {
+              "modelType": "Property",
+              "valueType": "xs:string",
+              "description": [
+                {
+                  "language": "Korean",
+                  "text": "트윈 조합에 대한 설명"
+                }
+              ],
+              "idShort": "CompositionDescription"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "idShort": "TotalQuantityPrediction",
+      "description": [
+        {
+          "language": "Korean",
+          "text": "Simulationsubmodeltemplate"
+        }
+      ],
+      "id": "https://www.samcheon.com/mdt/Welder/sm/Simulation/TotalQuantityPrediction",
+      "kind": "Instance",
+      "semanticId": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://etri.re.kr/mdt/Submodel/Simulation/1/1"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "idShort": "SubModelInfo",
+          "value": [
+            {
+              "idShort": "Title",
+              "valueType": "xs:string",
+              "value": "생산량 예측",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "Creator",
+              "valueType": "xs:string",
+              "value": "ETRI",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "Identifier",
+              "valueType": "xs:string",
+              "value": "TotalQuantityPrediction",
+              "modelType": "Property"
+            },
+            {
+              "idShort": "ReferenceAddress",
+              "value": [
+                {
+                  "idShort": "DockerImageID",
+                  "valueType": "xs:string",
+                  "value": "NA",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "Address",
+                  "valueType": "xs:string",
+                  "value": "NA",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "SimulationInfo",
+          "value": [
+            {
+              "idShort": "Model",
+              "value": [
+                {
+                  "idShort": "ModelFileType",
+                  "valueType": "xs:string",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "ModelFileVersion",
+                  "value": [
+                    {
+                      "idShort": "ModelVersionId",
+                      "valueType": "xs:string",
+                      "value": "MDT/ProcessLine/SubModel/Simulation/SimulationInfo/ModelVersionId/0.3",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "ModelPreviewImage",
+                      "valueType": "xs:string",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "DigitalFile",
+                      "valueType": "xs:string",
+                      "value": "LGE_CW_Innercase00_PlnatSimulationModel_v0.3.spp",
+                      "modelType": "Property"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                },
+                {
+                  "idShort": "LastExecutionTime",
+                  "category": "VARIABLE",
+                  "valueType": "xs:duration",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "MinResourceRequirements",
+              "value": [
+                {
+                  "idShort": "CPUNum",
+                  "valueType": "xs:string",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "MemorySize",
+                  "valueType": "xs:string",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "MemorySpeed",
+                  "valueType": "xs:string",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "SimulationTool",
+              "value": [
+                {
+                  "idShort": "SimToolName",
+                  "valueType": "xs:string",
+                  "value": "TecnomatixPlantSimulation16.1",
+                  "modelType": "Property"
+                },
+                {
+                  "category": "PARAMETER",
+                  "idShort": "SimulationTimeout",
+                  "valueType": "xs:duration",
+                  "value": "PT5M",
+                  "modelType": "Property"
+                },
+                {
+                  "category": "PARAMETER",
+                  "idShort": "SessionRetainTimeout",
+                  "valueType": "xs:duration",
+                  "value": "PT30S",
+                  "modelType": "Property"
+                },
+                {
+                  "category": "PARAMETER",
+                  "idShort": "SimulatorEndpoint",
+                  "valueType": "xs:string",
+                  "value": "http://localhost:12987",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            },
+            {
+              "idShort": "Inputs",
+              "orderRelevant": true,
+              "typeValueListElement": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "NozzleProduction",
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://etri.re.kr/mdt/Submodel/Operation/Input/1/1"
+                      }
+                    ]
+                  },
+                  "value": [
+                    {
+                      "idShort": "InputID",
+                      "valueType": "xs:string",
+                      "value": "NozzleProduction",
+                      "modelType": "Property"
+                    },
+                    {
+                      "idShort": "InputValue",
+                      "category": "VARIABLE",
+                      "modelType": "SubmodelElementCollection",
+                      "value": [
+                        {
+                          "idShort": "Timestamp",
+                          "valueType": "xs:dateTime",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "QuantityProduced",
+                          "valueType": "xs:int",
+                          "value": "0",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "AvgProcessingTime",
+                          "valueType": "xs:duration",
+                          "value": "PT0S",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "AvgWaitingTime",
+                          "valueType": "xs:duration",
+                          "value": "PT0S",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "DefectVolume",
+                          "valueType": "xs:int",
+                          "value": "0",
+                          "modelType": "Property"
+                        },
+                        {
+                          "idShort": "AvgDefectRate",
+                          "valueType": "xs:float",
+                          "value": "0.0",
+                          "modelType": "Property"
+                        }
+                      ]
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                }
+              ],
+              "modelType": "SubmodelElementList"
+            },
+            {
+              "idShort": "Outputs",
+              "orderRelevant": true,
+              "typeValueListElement": "SubmodelElementCollection",
+              "value": [
+                {
+                  "idShort": "TotalQuantityPrediction",
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://etri.re.kr/mdt/Submodel/Operation/Output/1/1"
+                      }
+                    ]
+                  },
+                  "value": [
+                    {
+                      "idShort": "OutputID",
+                      "valueType": "xs:string",
+                      "value": "TotalQuantityPrediction",
+                      "modelType": "Property"
+                    },
+                    {
+                      "modelType": "Property",
+                      "idShort": "OutputValue",
+                      "valueType": "xs:int"
+                    }
+                  ],
+                  "modelType": "SubmodelElementCollection"
+                }
+              ],
+              "modelType": "SubmodelElementList"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "Operation",
+          "inputVariables": [
+            {
+              "value": {
+                "idShort": "NozzleProduction",
+                "modelType": "SubmodelElementCollection",
+                "value": [
+                  {
+                    "idShort": "Timestamp",
+                    "valueType": "xs:dateTime",
+                    "modelType": "Property"
+                  },
+                  {
+                    "idShort": "QuantityProduced",
+                    "valueType": "xs:int",
+                    "modelType": "Property"
+                  },
+                  {
+                    "idShort": "AvgProcessingTime",
+                    "valueType": "xs:duration",
+                    "modelType": "Property"
+                  },
+                  {
+                    "idShort": "AvgWaitingTime",
+                    "valueType": "xs:duration",
+                    "modelType": "Property"
+                  },
+                  {
+                    "idShort": "DefectVolume",
+                    "valueType": "xs:int",
+                    "modelType": "Property"
+                  },
+                  {
+                    "idShort": "AvgDefectRate",
+                    "valueType": "xs:float",
+                    "modelType": "Property"
+                  }
+                ]
+              }
+            }
+          ],
+          "outputVariables": [
+            {
+              "value": {
+                "modelType": "Property",
+                "idShort": "TotalQuantityPrediction",
+                "valueType": "xs:int"
+              }
+            }
+          ],
+          "modelType": "Operation"
+        }
+      ],
+      "modelType": "Submodel",
+      "category": "CONSTANT"
+    },
+    {
+      "idShort": "WelderAmpereLog",
+      "description": [
+        {
+          "language": "de",
+          "text": "Enthält Zeitreihendaten und Referenzen auf Zeitreihendaten, um diese entlang des Asset Lebenszyklus aufzufinden und semantisch zu beschreiben."
+        },
+        {
+          "language": "en",
+          "text": "Contains time series data and references to time series data to discover and semantically describe them along the asset lifecycle."
+        }
+      ],
+      "administration": {
+        "version": "1",
+        "revision": "1"
+      },
+      "id": "https://www.samcheon.com/mdt/Welder/sm/TimeSeries/WelderAmpereLog",
+      "kind": "Template",
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "Submodel",
+            "value": "https://admin-shell.io/idta/TimeSeries/1/1"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "idShort": "Metadata",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Metadata/1/1"
+              }
+            ]
+          },
+          "qualifiers": [
+            {
+              "type": "Cardinality",
+              "valueType": "xs:string",
+              "value": "One"
+            }
+          ],
+          "value": [
+            {
+              "category": "PARAMETER",
+              "idShort": "Name",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Metadata/Name/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "One"
+                }
+              ],
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Ampere Values"
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Description",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Metadata/Description/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "ZeroToOne"
+                }
+              ],
+              "value": [
+                {
+                  "language": "kr",
+                  "text": "식기 세척기 날개 융착기 동작 전류 데이터."
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "idShort": "RecordMetadata",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Record/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "One"
+                }
+              ],
+              "value": [
+                {
+                  "category": "VARIABLE",
+                  "idShort": "Time",
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://admin-shell.io/idta/TimeSeries/UtcTime/1/1"
+                      }
+                    ]
+                  },
+                  "qualifiers": [
+                    {
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://admin-shell.io/SubmodelTemplates/Cardinality/1/0"
+                          }
+                        ]
+                      },
+                      "type": "Cardinality",
+                      "valueType": "xs:string",
+                      "value": "OneToMany"
+                    },
+                    {
+                      "semanticId": {
+                        "type": "ExternalReference",
+                        "keys": [
+                          {
+                            "type": "GlobalReference",
+                            "value": "https://admin-shell.io/SubmodelTemplates/AllowedIdShort/1/0"
+                          }
+                        ]
+                      },
+                      "type": "AllowedIdShort",
+                      "valueType": "xs:string",
+                      "value": "Time[\\d{2,3}]"
+                    }
+                  ],
+                  "valueType": "xs:dateTime",
+                  "modelType": "Property"
+                },
+                {
+                  "category": "VARIABLE",
+                  "idShort": "Ampere",
+                  "valueType": "xs:float",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "ReadRecords",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/ReadRecords/1/1"
+              }
+            ]
+          },
+          "qualifiers": [
+            {
+              "type": "Cardinality",
+              "valueType": "xs:string",
+              "value": "ZeroToOne"
+            }
+          ],
+          "inputVariables": [
+            {
+              "value": {
+                "idShort": "Timespan",
+                "description": [
+                  {
+                    "language": "en",
+                    "text": "The valueType of the given timespan must match the valueType of the time properties of the segments."
+                  }
+                ],
+                "semanticId": {
+                  "type": "ExternalReference",
+                  "keys": [
+                    {
+                      "type": "GlobalReference",
+                      "value": "https://admin-shell.io/idta/TimeSeries/Timespan/1/1"
+                    }
+                  ]
+                },
+                "valueType": "xs:dateTime",
+                "modelType": "Range"
+              }
+            }
+          ],
+          "outputVariables": [
+            {
+              "value": {
+                "idShort": "Records",
+                "modelType": "SubmodelElementCollection"
+              }
+            }
+          ],
+          "modelType": "Operation"
+        }
+      ],
+      "modelType": "Submodel",
+      "category": "CONSTANT"
+    },
+    {
+      "idShort": "NozzleProductionLog",
+      "description": [
+        {
+          "language": "de",
+          "text": "Enthält Zeitreihendaten und Referenzen auf Zeitreihendaten, um diese entlang des Asset Lebenszyklus aufzufinden und semantisch zu beschreiben."
+        },
+        {
+          "language": "en",
+          "text": "Contains time series data and references to time series data to discover and semantically describe them along the asset lifecycle."
+        }
+      ],
+      "administration": {
+        "version": "1",
+        "revision": "1"
+      },
+      "id": "https://www.samcheon.com/mdt/Welder/sm/TimeSeries/NozzleProductionLog",
+      "kind": "Template",
+      "semanticId": {
+        "type": "ModelReference",
+        "keys": [
+          {
+            "type": "Submodel",
+            "value": "https://admin-shell.io/idta/TimeSeries/1/1"
+          }
+        ]
+      },
+      "submodelElements": [
+        {
+          "idShort": "Metadata",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/Metadata/1/1"
+              }
+            ]
+          },
+          "qualifiers": [
+            {
+              "type": "Cardinality",
+              "valueType": "xs:string",
+              "value": "One"
+            }
+          ],
+          "value": [
+            {
+              "category": "PARAMETER",
+              "idShort": "Name",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Metadata/Name/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "One"
+                }
+              ],
+              "value": [
+                {
+                  "language": "en",
+                  "text": "Ampere Values"
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "category": "PARAMETER",
+              "idShort": "Description",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Metadata/Description/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "ZeroToOne"
+                }
+              ],
+              "value": [
+                {
+                  "language": "kr",
+                  "text": "식기 세척기 날개 융착기 동작 전류 데이터."
+                }
+              ],
+              "modelType": "MultiLanguageProperty"
+            },
+            {
+              "idShort": "RecordMetadata",
+              "semanticId": {
+                "type": "ExternalReference",
+                "keys": [
+                  {
+                    "type": "GlobalReference",
+                    "value": "https://admin-shell.io/idta/TimeSeries/Record/1/1"
+                  }
+                ]
+              },
+              "qualifiers": [
+                {
+                  "type": "Cardinality",
+                  "valueType": "xs:string",
+                  "value": "One"
+                }
+              ],
+              "value": [
+                {
+                  "idShort": "Time",
+                  "semanticId": {
+                    "type": "ExternalReference",
+                    "keys": [
+                      {
+                        "type": "GlobalReference",
+                        "value": "https://admin-shell.io/idta/TimeSeries/UtcTime/1/1"
+                      }
+                    ]
+                  },
+                  "valueType": "xs:dateTime",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "QuantityProduced",
+                  "valueType": "xs:int",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "AvgProcessingTime",
+                  "valueType": "xs:duration",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "AvgWaitingTime",
+                  "valueType": "xs:duration",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "DefectVolume",
+                  "valueType": "xs:int",
+                  "modelType": "Property"
+                },
+                {
+                  "idShort": "AvgDefectRate",
+                  "valueType": "xs:float",
+                  "modelType": "Property"
+                }
+              ],
+              "modelType": "SubmodelElementCollection"
+            }
+          ],
+          "modelType": "SubmodelElementCollection"
+        },
+        {
+          "idShort": "ReadRecords",
+          "semanticId": {
+            "type": "ExternalReference",
+            "keys": [
+              {
+                "type": "GlobalReference",
+                "value": "https://admin-shell.io/idta/TimeSeries/ReadRecords/1/1"
+              }
+            ]
+          },
+          "qualifiers": [
+            {
+              "type": "Cardinality",
+              "valueType": "xs:string",
+              "value": "ZeroToOne"
+            }
+          ],
+          "inputVariables": [
+            {
+              "value": {
+                "idShort": "Timespan",
+                "description": [
+                  {
+                    "language": "en",
+                    "text": "The valueType of the given timespan must match the valueType of the time properties of the segments."
+                  }
+                ],
+                "semanticId": {
+                  "type": "ExternalReference",
+                  "keys": [
+                    {
+                      "type": "GlobalReference",
+                      "value": "https://admin-shell.io/idta/TimeSeries/Timespan/1/1"
+                    }
+                  ]
+                },
+                "valueType": "xs:dateTime",
+                "modelType": "Range"
+              }
+            }
+          ],
+          "outputVariables": [
+            {
+              "value": {
+                "idShort": "Records",
+                "modelType": "SubmodelElementCollection"
+              }
+            }
+          ],
+          "modelType": "Operation"
+        }
+      ],
+      "modelType": "Submodel",
+      "category": "CONSTANT"
+    }
+  ]
+}

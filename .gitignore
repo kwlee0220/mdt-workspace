@@ -1,6 +1,9 @@
 /bundles/
 /instances/
 /logs/
+/mdt-operation-http/innercase/
+/mdt-operation-http/skku/
+/mdt-operation-http/test/
 
 *.log
 mdt-*.jar
